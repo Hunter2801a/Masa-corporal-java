@@ -13,7 +13,8 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 
-public class ventanaLab3 extends JFrame {
+public class ventanaLab3 extends JFrame 
+{
 
     private static final long serialVersionUID = 1L;
     private JPanel contentPane;
@@ -26,9 +27,12 @@ public class ventanaLab3 extends JFrame {
     private JTextField EmplTotal;
     private int totalEmpleados = 0;
 
-    public static void main(String[] args) {
-        EventQueue.invokeLater(new Runnable() {
-            public void run() {
+    public static void main(String[] args) 
+    {
+        EventQueue.invokeLater(new Runnable() 
+        {
+            public void run() 
+            {
                 try {
                     ventanaLab3 frame = new ventanaLab3();
                     frame.setVisible(true);
@@ -39,7 +43,8 @@ public class ventanaLab3 extends JFrame {
         });
     }
 
-    public ventanaLab3() {
+    public ventanaLab3() 
+    {
         setTitle("<h1>centro medico: \"LA CASA DEL CLAN\"</h1>");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 702, 469);
@@ -261,13 +266,15 @@ public class ventanaLab3 extends JFrame {
         IMC.setText("");
     }
 
-    private void actualizarIMC() {
+    private void actualizarIMC() 
+    {
         try {
             double altura = Double.parseDouble(Altura.getText());
             double peso = Double.parseDouble(Peso.getText());
             double imc = calcularIMC(peso, altura);
             IMC.setText(String.format("%.2f", imc));
-        } catch (NumberFormatException e) {
+        } catch (NumberFormatException e)
+        {
             IMC.setText("");
         }
     }
